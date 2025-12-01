@@ -1,0 +1,55 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+a{
+    text-decoration: none;
+    background-color: aqua;
+    font-size: 2rem;
+    padding: 1rem 4rem;
+    color: aliceblue;
+    position: relative;
+    border-radius: 20px;
+}
+a::before{
+    position: absolute;
+    content: "HELLO";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    color: black;
+    transform: rotateX(270deg);
+    transform-origin: top;
+    transition: all 1s;
+    background-color: beige;
+    border-radius: 20px;
+}
+a::after{
+    position: absolute;
+    content: "HI";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    color: brown;
+    background-color: rgb(110, 65, 7);
+    transform: rotateX(270deg);
+    transform-origin: top;
+    transition: all 1.5s;
+    transition-delay: 0.25s;
+    border-radius: 20px;
+}
+a:hover::before,
+a:hover::after
+{
+    transform: rotateX(0);
+}
